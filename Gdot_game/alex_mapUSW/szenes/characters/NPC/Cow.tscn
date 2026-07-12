@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://bb83ok5xfjmev"]
+
+[ext_resource type="Script" uid="uid://bdav3t3gks565" path="res://alex_mapUSW/szenes/characters/NPC/Chicken.cs" id="1_hu7dd"]
+[ext_resource type="Texture2D" uid="uid://dmfu5tj4ln66p" path="res://alex_mapUSW/asset/game/characters/cow_sprites.png" id="2_hu7dd"]
+[ext_resource type="PackedScene" uid="uid://bfu4ftnsojwic" path="res://alex_mapUSW/Componenten/milk.tscn" id="2_uty50"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uty50"]
+atlas = ExtResource("2_hu7dd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh433"]
+atlas = ExtResource("2_hu7dd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fiwq"]
+atlas = ExtResource("2_hu7dd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu4ix"]
+atlas = ExtResource("2_hu7dd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn3iq"]
+atlas = ExtResource("2_hu7dd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bliij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uty50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh433")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fiwq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xu4ix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn3iq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrhsf"]
+size = Vector2(20, 14)
+
+[node name="Cow" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_hu7dd")
+sprite = NodePath("AnimatedSprite2D")
+EggScene = ExtResource("2_uty50")
+MinEggTime = 30.0
+MaxEggTime = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_bliij")
+animation = &"idle"
+frame_progress = 0.74303484
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -7)
+shape = SubResource("RectangleShape2D_lrhsf")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

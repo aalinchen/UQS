@@ -1,0 +1,131 @@
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://618q4ijggw5l"]
+
+[ext_resource type="Texture2D" uid="uid://bhjbas7lgvu0h" path="res://alex_mapUSW/asset/ui/Basic_ui_sprites.png" id="1_touxu"]
+[ext_resource type="FontFile" uid="uid://devig0eu2yk63" path="res://sprites/Super Pixel Personal Use.ttf" id="2_2pn01"]
+[ext_resource type="FontFile" uid="uid://cnrgsq64bu4tk" path="res://sprites/Pixellari.ttf" id="2_tbeor"]
+[ext_resource type="Texture2D" uid="uid://sfyql3oh574c" path="res://alex_mapUSW/asset/ui/Setting menu.png" id="4_mk0s6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pn01"]
+atlas = ExtResource("1_touxu")
+region = Rect2(201, 105, 30, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbeor"]
+texture = SubResource("AtlasTexture_2pn01")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbeor"]
+atlas = ExtResource("1_touxu")
+region = Rect2(107, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mk0s6"]
+texture = SubResource("AtlasTexture_tbeor")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="FontVariation" id="FontVariation_mk0s6"]
+base_font = ExtResource("2_tbeor")
+
+[sub_resource type="FontVariation" id="FontVariation_5kxjo"]
+base_font = ExtResource("2_2pn01")
+spacing_space = 5
+spacing_top = 5
+spacing_bottom = 5
+
+[sub_resource type="FontVariation" id="FontVariation_tpf0h"]
+base_font = ExtResource("2_tbeor")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4wr8"]
+atlas = ExtResource("4_mk0s6")
+region = Rect2(139, 12, 106, 122)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wgsb3"]
+texture = SubResource("AtlasTexture_g4wr8")
+texture_margin_left = 4.742971
+texture_margin_top = 5.803444
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 106, 122)
+
+[sub_resource type="FontVariation" id="FontVariation_g7fvb"]
+base_font = ExtResource("2_tbeor")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7fvb"]
+atlas = ExtResource("1_touxu")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpf0h"]
+texture = SubResource("AtlasTexture_g7fvb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 26, 28)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mk0s6"]
+load_path = "res://.godot/imported/Basic_ui_sprites.png-a9c08617be2604b5ed529bdbc4dc9e25.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kxjo"]
+atlas = SubResource("CompressedTexture2D_mk0s6")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7fvb"]
+texture = SubResource("AtlasTexture_5kxjo")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpf0h"]
+atlas = ExtResource("1_touxu")
+region = Rect2(11, 155, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5y56j"]
+texture = SubResource("AtlasTexture_tpf0h")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y56j"]
+atlas = ExtResource("1_touxu")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4wr8"]
+texture = SubResource("AtlasTexture_5y56j")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[resource]
+Button/styles/disabled = null
+DarkWoodPanel/base_type = &"PanelContainer"
+DarkWoodPanel/styles/panel = SubResource("StyleBoxTexture_tbeor")
+InventoryItemPanel/base_type = &"PanelContainer"
+InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_mk0s6")
+InventoryLabel/base_type = &"Label"
+InventoryLabel/font_sizes/font_size = 15
+InventoryLabel/fonts/font = SubResource("FontVariation_mk0s6")
+Label/font_sizes/font_size = 22
+Label/fonts/font = SubResource("FontVariation_5kxjo")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+SettingsLabel/base_type = &"Label"
+SettingsLabel/fonts/font = SubResource("FontVariation_tpf0h")
+SettingsPanel/base_type = &"PanelContainer"
+SettingsPanel/styles/panel = SubResource("StyleBoxTexture_wgsb3")
+ToolButton/base_type = &"Button"
+ToolButton/font_sizes/font_size = 23
+ToolButton/fonts/font = SubResource("FontVariation_g7fvb")
+ToolButton/styles/focus = SubResource("StyleBoxTexture_tpf0h")
+ToolButton/styles/hover = SubResource("StyleBoxTexture_g7fvb")
+ToolButton/styles/normal = SubResource("StyleBoxTexture_5y56j")
+ToolButton/styles/pressed = SubResource("StyleBoxTexture_g4wr8")

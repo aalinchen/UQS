@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blruab5j64fri"]
+
+[ext_resource type="Script" uid="uid://cbhpt2e01skmr" path="res://alex_mapUSW/Componenten/HitComponent.cs" id="1_btpbf"]
+
+[node name="HitComponent" type="Area2D"]
+script = ExtResource("1_btpbf")
+CurrentTool = 1

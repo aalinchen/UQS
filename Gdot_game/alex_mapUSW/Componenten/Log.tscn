@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi5f4p8q5nsjn"]
+
+[ext_resource type="Script" uid="uid://cl5olox7iole8" path="res://alex_mapUSW/scripts/WorldItem.cs" id="1_4v4cq"]
+[ext_resource type="Texture2D" uid="uid://dwke65t5ypxp0" path="res://alex_mapUSW/asset/game/objects/basic_gras_and_biome.png" id="1_xpvt8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpvt8"]
+atlas = ExtResource("1_xpvt8")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go3ed"]
+size = Vector2(12, 7)
+
+[node name="Log" type="Area2D"]
+script = ExtResource("1_4v4cq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = SubResource("AtlasTexture_xpvt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_go3ed")

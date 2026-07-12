@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://dgglcilicmo2b"]
+
+[ext_resource type="Script" uid="uid://c0r4uwpgrtlau" path="res://alex_mapUSW/szenes/Felder_Crops/Field.cs" id="1_qocuh"]
+[ext_resource type="Texture2D" uid="uid://ub72qpp0faka" path="res://alex_mapUSW/asset/game/tileset/Tilled Dirt.png" id="2_0ih25"]
+[ext_resource type="Texture2D" uid="uid://tka25l113kyu" path="res://alex_mapUSW/asset/game/objects/paths.png" id="2_meylt"]
+[ext_resource type="Texture2D" uid="uid://bhjbas7lgvu0h" path="res://alex_mapUSW/asset/ui/Basic_ui_sprites.png" id="5_1ieh8"]
+[ext_resource type="Texture2D" uid="uid://dt4ywleyuv4xk" path="res://alex_mapUSW/asset/ui/Text2.png" id="5_nul6b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nul6b"]
+atlas = ExtResource("2_0ih25")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ieh8"]
+atlas = ExtResource("2_meylt")
+region = Rect2(1, 24, 12, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nul6b"]
+size = Vector2(99.875, 103.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k2a5m"]
+texture = ExtResource("5_1ieh8")
+region_rect = Rect2(709, 36, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw6eb"]
+atlas = ExtResource("5_nul6b")
+region = Rect2(26, 96, 4, 6)
+
+[node name="Field" type="Area2D"]
+visibility_layer = 2
+scale = Vector2(1.0075527, 1)
+script = ExtResource("1_qocuh")
+NormalTexture = SubResource("AtlasTexture_nul6b")
+TilledTexture = SubResource("AtlasTexture_1ieh8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.16, 0.16)
+shape = SubResource("RectangleShape2D_nul6b")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 3.9700155
+offset_top = -9.000001
+offset_right = 15.970016
+offset_bottom = 2.999999
+scale = Vector2(0.4910977, 0.5082487)
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxTexture_k2a5m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Label"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.9550233
+offset_top = 3.0000005
+offset_right = 43.955025
+offset_bottom = 43.0
+scale = Vector2(0.09915976, 0.14649966)
+texture = SubResource("AtlasTexture_pw6eb")
+expand_mode = 1

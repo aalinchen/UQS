@@ -1,0 +1,150 @@
+[gd_scene load_steps=26 format=4 uid="uid://8ejnhmlwhemt"]
+
+[ext_resource type="PackedScene" uid="uid://c8dyxk4och4yf" path="res://alex_mapUSW/szenes/test/test_scene_tilemap.tscn" id="1_6d6u0"]
+[ext_resource type="PackedScene" uid="uid://b1cj0kkyleia2" path="res://alex_mapUSW/szenes/characters/player/player.tscn" id="2_oujhh"]
+[ext_resource type="PackedScene" uid="uid://dgglcilicmo2b" path="res://alex_mapUSW/szenes/Felder_Crops/Field.tscn" id="3_6h52w"]
+[ext_resource type="Texture2D" uid="uid://c8rr4b26mclkj" path="res://alex_mapUSW/asset/game/objects/Basic Plants.png" id="4_ikv20"]
+[ext_resource type="Texture2D" uid="uid://brsdfsmws7jg3" path="res://alex_mapUSW/asset/pictures/ChestInventory.png" id="5_ek14r"]
+[ext_resource type="Texture2D" uid="uid://b6rsq1xtpnkd7" path="res://alex_mapUSW/asset/game/objects/chest.png" id="5_urxgi"]
+[ext_resource type="PackedScene" uid="uid://j7c18l3l7ej5" path="res://alex_mapUSW/szenes/smalltree.tscn" id="6_gf7l7"]
+[ext_resource type="Script" uid="uid://cl5olox7iole8" path="res://alex_mapUSW/scripts/WorldItem.cs" id="6_p6k7n"]
+[ext_resource type="PackedScene" uid="uid://bfu4ftnsojwic" path="res://alex_mapUSW/Componenten/milk.tscn" id="7_ar66k"]
+[ext_resource type="Texture2D" uid="uid://dvban2q5r8mu5" path="res://alex_mapUSW/asset/game/objects/Egg item.png" id="7_ed3hc"]
+[ext_resource type="PackedScene" uid="uid://vvwsinihl52i" path="res://UI.tscn" id="7_ek14r"]
+[ext_resource type="Script" uid="uid://4kiiu8pl8r4q" path="res://alex_mapUSW/szenes/Tutorial/TutorialController.cs" id="8_ar66k"]
+[ext_resource type="PackedScene" uid="uid://cam68lhn5q2p3" path="res://alex_mapUSW/Componenten/egg.tscn" id="8_knqjf"]
+[ext_resource type="PackedScene" uid="uid://ccrm25n1egva3" path="res://alex_mapUSW/szenes/Tutorial/TutorialUI.tscn" id="9_ikv20"]
+[ext_resource type="TileSet" uid="uid://dcalswyreljgp" path="res://alex_mapUSW/Tilesets/game_tilesets.tres" id="13_ar66k"]
+[ext_resource type="PackedScene" uid="uid://rsi0q0uu3ax1" path="res://alex_mapUSW/szenes/characters/NPC/chicken.tscn" id="14_knqjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knqjf"]
+atlas = ExtResource("4_ikv20")
+region = Rect2(17, 7, 13, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8br5"]
+atlas = ExtResource("4_ikv20")
+region = Rect2(33, 3, 15, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6k7n"]
+atlas = ExtResource("4_ikv20")
+region = Rect2(65, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed3hc"]
+atlas = ExtResource("4_ikv20")
+region = Rect2(49, 1, 15, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knqjf"]
+size = Vector2(31, 22)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_noevh"]
+radius = 4.0
+height = 10.0
+
+[sub_resource type="PackedScene" id="PackedScene_awqw3"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Egg", "Area2D", "script", "ItemId", "Sprite2D", "Sprite2D", "position", "scale", "texture", "CollisionShape2D", "CollisionShape2D", "position", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 3, 6, 2, 7, 3, 8, 4, 0, 1073741825, 0, 10, 9, -1, 2, 11, 5, 12, 6, 0),
+"variants": [ExtResource("6_p6k7n"), "egg", Vector2(-1.7763568e-15, -5), Vector2(0.6875, 0.6875), ExtResource("7_ed3hc"), Vector2(0, -5), SubResource("CapsuleShape2D_noevh")],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_p6k7n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awqw3"]
+atlas = ExtResource("5_urxgi")
+region = Rect2(63, 19, 18, 13)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="GameWorld" parent="." instance=ExtResource("1_6d6u0")]
+
+[node name="weg" type="TileMapLayer" parent="GameWorld"]
+tile_map_data = PackedByteArray("AAAyABgAFwAAAAsAAAAyABkAFwAAAAwAAAAyABoAFwAAAA0AAAAzABgAFwABAAsAAAAzABkAFwABAAwAAAAzABoAFwABAA0AAAA0ABgAFwACAAsAAAA0ABkAFwACAAwAAAA0ABoAFwACAA0AAAA1AB4AAgAAAAAAAAA1AB8AAgAGAAUAAEA1ACAAAgAAAAIAAAA2AB4AAgAGAAUAAAA2AB8AAgABAAEAAAA2ACAAAgAHAAUAACA3AB4AAgACAAAAAAA3AB8AAgAGAAQAABA3ACAAAgACAAIAAAA6ABwAAgAEAAIAAAA7AB0AAgABAAEAAAA7AB4AAgAGAAEAAAA8ABwAAgAFAAIAAAA8AB0AAgABAAEAAAA8AB4AAgABAAEAAAA9ABwAAgACAAAAAAA9AB0AAgAFAAIAAAA9AB4AAgAFAAEAAAA7AB8AAgAAAAIAAAA8AB8AAgAHAAUAACA9AB8AAgACAAIAAAA7ABsAAgAAAAAAAAA8ABsAAgACAAAAAAA+AB0AAgACAAAAAAA+AB4AAgACAAIAAAA7ABwAAgAGAAIAAAA4AB8AAgADAAEAAFA5AB8AAgAHAAMAAAA6ABsAAgADAAEAAAA6ABoAAgADAAEAAAA6ABkAAgAHAAAAAAA5ABgAAgADAAEAAAA5ABkAAgAEAAMAAAA5AB0AAgAAAAAAAAA5AB4AAgAFAAMAAFA6AB0AAgAGAAIAAAA6AB4AAgAHAAUAACA=")
+tile_set = ExtResource("13_ar66k")
+
+[node name="gras" type="TileMapLayer" parent="GameWorld"]
+z_index = 1
+tile_map_data = PackedByteArray("AABBAB8AFwALABkAAAA4ACEAFwALABkAAAA1ABkAFwALABkAAABAABwAFwAOACoAAAA3ABwAFwAOACoAAAA0AB8AFwAOACoAAAAzABwAFwAOACoAAAA9ABkAFwAOACoAAAA7ACIAFwAOACoAAAA/AB8AGAAIAAsAAAA/AB0AFwAOACcAAAA8ABoAFwAOACcAAAA1AB0AFwAOACcAAABAACIAFwAOACcAAAA/ACIAFwAKADAAAAA1ABoAFwAKADAAAAA9ACIAGAADAAgAAAAyAB8AGAADAAgAAAA1ABsAGAADAAgAAAA3ABkAGAADAAgAAAA+ABsAGAADAAgAAAA9ABoAGAADAAgAAAA1ACIAGAAIAAsAAAA4AB0AGAAIAAsAAAA=")
+tile_set = ExtResource("13_ar66k")
+
+[node name="Field" parent="GameWorld" instance=ExtResource("3_6h52w")]
+position = Vector2(957, 530)
+
+[node name="Field1" type="Sprite2D" parent="GameWorld/Field"]
+position = Vector2(18.857544, 1)
+scale = Vector2(0.9925039, 1)
+texture = SubResource("AtlasTexture_knqjf")
+
+[node name="Field2" type="Sprite2D" parent="GameWorld/Field"]
+position = Vector2(37.71515, -1)
+scale = Vector2(0.9925039, 1)
+texture = SubResource("AtlasTexture_m8br5")
+
+[node name="Field3" type="Sprite2D" parent="GameWorld/Field"]
+position = Vector2(74.437744, -1)
+scale = Vector2(0.9925039, 1)
+texture = SubResource("AtlasTexture_p6k7n")
+
+[node name="Field4" type="Sprite2D" parent="GameWorld/Field"]
+position = Vector2(56.572693, -1)
+scale = Vector2(0.9925039, 1)
+texture = SubResource("AtlasTexture_ed3hc")
+
+[node name="Chicken" type="CharacterBody2D" parent="GameWorld"]
+z_index = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GameWorld/Chicken"]
+position = Vector2(877, 492)
+shape = SubResource("RectangleShape2D_knqjf")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="GameWorld/Chicken"]
+polygon = PackedVector2Array(809, 559, 1086, 559, 1086, 405, 811, 405, 812, 564, 794, 564, 786, 387, 1099, 390, 1109, 568, 816, 567)
+
+[node name="Chicken" parent="GameWorld/Chicken/CollisionShape2D" instance=ExtResource("14_knqjf")]
+position = Vector2(924, 513)
+EggScene = SubResource("PackedScene_awqw3")
+
+[node name="Chicken2" parent="GameWorld/Chicken/CollisionShape2D" instance=ExtResource("14_knqjf")]
+position = Vector2(934, 450)
+EggScene = SubResource("PackedScene_p6k7n")
+
+[node name="Player" parent="GameWorld" instance=ExtResource("2_oujhh")]
+z_index = 2
+position = Vector2(949, 482)
+
+[node name="CHestInv" type="Sprite2D" parent="GameWorld"]
+position = Vector2(881.00006, 490.00003)
+scale = Vector2(0.056475826, 0.056475807)
+texture = ExtResource("5_ek14r")
+
+[node name="Chest" type="Sprite2D" parent="GameWorld/CHestInv"]
+position = Vector2(-209.29297, 152.71973)
+scale = Vector2(15.32312, 15.323122)
+texture = SubResource("AtlasTexture_awqw3")
+
+[node name="Milk" parent="GameWorld" instance=ExtResource("7_ar66k")]
+position = Vector2(970, 476)
+
+[node name="Egg" parent="GameWorld" instance=ExtResource("8_knqjf")]
+position = Vector2(961, 464)
+
+[node name="smalltree" parent="GameWorld" instance=ExtResource("6_gf7l7")]
+position = Vector2(914, 429)
+
+[node name="Ui" parent="." instance=ExtResource("7_ek14r")]
+
+[node name="TutorialController" type="Node" parent="."]
+script = ExtResource("8_ar66k")
+PlayerPath = NodePath("../GameWorld/Player")
+TutorialUiPath = NodePath("../TutorialUi")
+
+[node name="TutorialUi" parent="." instance=ExtResource("9_ikv20")]
+
+[node name="Deko" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAA0ABsABAABAAAAAAA0ACEABAABAAAAAAA/ABoABAAIAAIAAAA3ABoABAAIAAIAAABCACEABAAIAAIAAABDAB4ABAAGAAQAAABBABoABAAGAAQAAABDABkABAAGAAQAAABDABsABAAHAAQAAABCABwABAAIAAQAAABAABkABAAIAAQAAAA3ACIABAAAAAMAAAAzAB4ABAAAAAMAAAA8ABkABAAAAAMAAAA=")
+tile_set = ExtResource("13_ar66k")

@@ -1,0 +1,2310 @@
+[gd_scene load_steps=117 format=3 uid="uid://vvwsinihl52i"]
+
+[ext_resource type="Script" uid="uid://cvgrtvywvp0x8" path="res://UI.cs" id="1_3b2b5"]
+[ext_resource type="Texture2D" uid="uid://cot5ib46i2nts" path="res://alex_mapUSW/asset/game/characters/baisc_character.png" id="3_c6dx3"]
+[ext_resource type="Theme" uid="uid://618q4ijggw5l" path="res://ui_theme.tres" id="3_g6l6n"]
+[ext_resource type="Texture2D" uid="uid://dvban2q5r8mu5" path="res://alex_mapUSW/asset/game/objects/Egg item.png" id="4_foiwe"]
+[ext_resource type="Texture2D" uid="uid://bwl2ubttopj8k" path="res://alex_mapUSW/asset/game/characters/basic_character_spritesheet.png" id="4_jqn02"]
+[ext_resource type="Texture2D" uid="uid://cu3s24b6nwq36" path="res://alex_mapUSW/asset/game/objects/Basic tools and meterials.png" id="4_vrfts"]
+[ext_resource type="Texture2D" uid="uid://c8rr4b26mclkj" path="res://alex_mapUSW/asset/game/objects/Basic Plants.png" id="5_0mc3e"]
+[ext_resource type="Texture2D" uid="uid://d3fdi3rrkoj15" path="res://alex_mapUSW/asset/game/objects/basic_plants.png" id="5_2n5f6"]
+[ext_resource type="Texture2D" uid="uid://r4la7e5oylcw" path="res://alex_mapUSW/asset/ui/Teemo Basic emote animations sprite sheet.png" id="5_foiwe"]
+[ext_resource type="Texture2D" uid="uid://c33bmkqubqscp" path="res://alex_mapUSW/asset/game/objects/egg_item.png" id="10_5xurb"]
+[ext_resource type="Texture2D" uid="uid://cax3omfs7wqev" path="res://alex_mapUSW/asset/game/objects/Simple Milk and grass item.png" id="11_taqas"]
+[ext_resource type="FontFile" uid="uid://cnrgsq64bu4tk" path="res://sprites/Pixellari.ttf" id="13_3ujc7"]
+[ext_resource type="Script" uid="uid://fssw3nje8vna" path="res://alex_mapUSW/szenes/test/MiniMapCamera.cs" id="13_foiwe"]
+[ext_resource type="Texture2D" uid="uid://bhjbas7lgvu0h" path="res://alex_mapUSW/asset/ui/Basic_ui_sprites.png" id="13_jqn02"]
+[ext_resource type="Script" uid="uid://bvm88vtalehc0" path="res://alex_mapUSW/szenes/chests/InventorySlotButton.cs" id="15_3ujc7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwaoy"]
+atlas = ExtResource("4_vrfts")
+region = Rect2(17, 17, 13, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p2jk"]
+atlas = ExtResource("4_vrfts")
+region = Rect2(1, 18, 14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4suer"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(81, 1, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j20bu"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(82, 17, 12, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4omld"]
+atlas = ExtResource("4_foiwe")
+region = Rect2(1, 1, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icfh3"]
+atlas = ExtResource("11_taqas")
+region = Rect2(34, 1, 12, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2af5h"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(2, 2, 12, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucg6n"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(2, 18, 12, 13)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2n5f6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27c8x"]
+atlas = ExtResource("4_vrfts")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q77pa"]
+atlas = ExtResource("4_vrfts")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6dx3"]
+atlas = ExtResource("5_2n5f6")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wyng"]
+atlas = ExtResource("5_2n5f6")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtt4m"]
+atlas = ExtResource("10_5xurb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asf2l"]
+atlas = ExtResource("11_taqas")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwmcr"]
+atlas = ExtResource("5_2n5f6")
+region = Rect2(2, 2, 12, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijs1t"]
+atlas = ExtResource("5_2n5f6")
+region = Rect2(2, 18, 12, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1vam"]
+atlas = ExtResource("4_vrfts")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q77pa"]
+load_path = "res://.godot/imported/Basic tools and meterials.png-ef21d4b3106f09801a9c43e5df4c16d1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8582"]
+atlas = SubResource("CompressedTexture2D_q77pa")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c6dx3"]
+load_path = "res://.godot/imported/Basic tools and meterials.png-ef21d4b3106f09801a9c43e5df4c16d1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqn02"]
+atlas = SubResource("CompressedTexture2D_c6dx3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foiwe"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ujc7"]
+atlas = ExtResource("5_0mc3e")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lakqf"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omvfv"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ln7"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp7c8"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm1di"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ieve"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7hrr"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onr04"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3xci"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbwmh"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weexh"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p1n3"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1m70"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8djys"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akb3p"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_128of"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5rvm"]
+atlas = ExtResource("5_foiwe")
+region = Rect2(0, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo1pa"]
+atlas = ExtResource("5_foiwe")
+region = Rect2(0, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40r0a"]
+atlas = ExtResource("5_foiwe")
+region = Rect2(32, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly2lw"]
+atlas = ExtResource("5_foiwe")
+region = Rect2(0, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnswe"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73acf"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnle5"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtrwj"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uj60"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l4qm"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8srrn"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odtrd"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2778h"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv65y"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njsah"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr65a"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcgd1"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcmml"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c71jm"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g83er"]
+atlas = ExtResource("4_jqn02")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghxss"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 432, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1w58"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 432, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bduos"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 384, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1po0f"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 384, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e725f"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 480, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l7tf"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 480, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjqg4"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(0, 528, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qkad"]
+atlas = ExtResource("3_c6dx3")
+region = Rect2(48, 528, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mirh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lakqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omvfv")
+}],
+"loop": true,
+"name": &"chopping_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ln7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp7c8")
+}],
+"loop": true,
+"name": &"chopping_front",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm1di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ieve")
+}],
+"loop": true,
+"name": &"chopping_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7hrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onr04")
+}],
+"loop": true,
+"name": &"chopping_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3xci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbwmh")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weexh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p1n3")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1m70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8djys")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akb3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_128of")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_d5rvm")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_qo1pa")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_40r0a")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ly2lw")
+}],
+"loop": true,
+"name": &"sleeping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnswe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73acf")
+}],
+"loop": true,
+"name": &"tilling_back",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnle5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtrwj")
+}],
+"loop": true,
+"name": &"tilling_front",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uj60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l4qm")
+}],
+"loop": true,
+"name": &"tilling_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8srrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odtrd")
+}],
+"loop": true,
+"name": &"tilling_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2778h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv65y")
+}],
+"loop": true,
+"name": &"walk_back",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njsah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gr65a")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcgd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcmml")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c71jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g83er")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghxss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1w58")
+}],
+"loop": true,
+"name": &"watering_back",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bduos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1po0f")
+}],
+"loop": true,
+"name": &"watering_front",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e725f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l7tf")
+}],
+"loop": true,
+"name": &"watering_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjqg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qkad")
+}],
+"loop": true,
+"name": &"watering_right",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xurb"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(311, 37, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ajnb"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(311, 69, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwijv"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(311, 101, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taqas"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(247, 148, 18, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5rvm"]
+texture = SubResource("AtlasTexture_taqas")
+texture_margin_left = 3.0
+texture_margin_top = 1.9806119
+texture_margin_right = 2.98527
+texture_margin_bottom = 2.98527
+region_rect = Rect2(0, 0, 18, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r4vt"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(402, 73, 28, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1oyfl"]
+texture = SubResource("AtlasTexture_1r4vt")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51slc"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(402, 73, 28, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rknla"]
+texture = SubResource("AtlasTexture_51slc")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mirh"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(343, 38, 18, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yyuk"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(247, 148, 18, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ajnb"]
+texture = SubResource("AtlasTexture_6yyuk")
+texture_margin_left = 3.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rknla"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(107, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwmcr"]
+texture = SubResource("AtlasTexture_rknla")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="FontVariation" id="FontVariation_ijs1t"]
+base_font = ExtResource("13_3ujc7")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2bi8"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(107, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftypo"]
+texture = SubResource("AtlasTexture_c2bi8")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="FontVariation" id="FontVariation_jwaoy"]
+base_font = ExtResource("13_3ujc7")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coxox"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(153, 9, 30, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wyng"]
+texture = SubResource("AtlasTexture_coxox")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oyfl"]
+atlas = ExtResource("5_foiwe")
+region = Rect2(5, 2, 23, 22)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c6dx3"]
+viewport_path = NodePath("MiniMapViewport")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftypo"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(107, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwaoy"]
+texture = SubResource("AtlasTexture_ftypo")
+region_rect = Rect2(2, 3, 22, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p13ui"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_if70d"]
+texture = SubResource("AtlasTexture_p13ui")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if70d"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6x225"]
+texture = SubResource("AtlasTexture_if70d")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yovhw"]
+atlas = ExtResource("13_jqn02")
+region = Rect2(107, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ks4ns"]
+texture = SubResource("AtlasTexture_yovhw")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0p2jk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4suer"]
+
+[node name="Ui" type="CanvasLayer" node_paths=PackedStringArray("MiniMapViewport", "MusicSlider", "SfxSlider", "BackFromSettingsButton", "DayLabel", "TimeLabel", "InventoryPanel", "PauseMenu", "SettingsMenu", "EmptyTool", "AxeButton", "TillingButton", "WateringButton", "CornSeedButton", "TomatoSeedButton", "DragIcon")]
+script = ExtResource("1_3b2b5")
+MiniMapViewport = NodePath("MiniMapViewport")
+MusicSlider = NodePath("SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/MusicSlider")
+SfxSlider = NodePath("SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/SfxSlider")
+BackFromSettingsButton = NodePath("SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/BackFromSettingsButton")
+DayLabel = NodePath("DayTime/dayPanel/DayLabel")
+TimeLabel = NodePath("DayTime/TimePanel/TimeLabel")
+InventoryPanel = NodePath("InventoryPanel")
+PauseMenu = NodePath("PauseMenu")
+SettingsMenu = NodePath("SettingsMenu")
+EmptyTool = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/empty")
+AxeButton = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/axeButton")
+TillingButton = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/tillingButton")
+WateringButton = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/wateringButton")
+CornSeedButton = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/cornseedButton")
+TomatoSeedButton = NodePath("ToolBarPanel/MarginContainer/VBoxContainer/tomatoseedButton")
+woodIcon = SubResource("AtlasTexture_jwaoy")
+stoneIcon = SubResource("AtlasTexture_0p2jk")
+weedIcon = SubResource("AtlasTexture_4suer")
+tomatoIcon = SubResource("AtlasTexture_j20bu")
+eggIcon = SubResource("AtlasTexture_4omld")
+milkIcon = SubResource("AtlasTexture_icfh3")
+weedSeedIcon = SubResource("AtlasTexture_2af5h")
+tomatoSeedIcon = SubResource("AtlasTexture_ucg6n")
+DragIcon = NodePath("DragIcon")
+
+[node name="InventoryAusgeschalten" type="PanelContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 79.0
+offset_top = -33.5
+offset_right = 273.08313
+offset_bottom = 33.5
+grow_vertical = 2
+rotation = 1.5707964
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"DarkWoodPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryAusgeschalten"]
+layout_mode = 2
+theme_override_constants/margin_left = 19
+theme_override_constants/margin_top = 10
+
+[node name="InventarAufklappLabel" type="Label" parent="InventoryAusgeschalten/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Inventar"
+
+[node name="InventoryPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(212, 400)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -200.0
+offset_right = 274.0
+offset_bottom = 285.18518
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"DarkWoodPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_g6l6n")
+
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = -32
+theme_override_constants/v_separation = 9
+columns = 3
+
+[node name="Panel" type="Panel" parent="InventoryPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2n5f6")
+
+[node name="Überschrift" type="Label" parent="InventoryPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 23
+text = "Inventar"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="InventoryPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Logs" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Logs"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_27c8x")
+
+[node name="logsLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Logs"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Logs"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="Stone" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Stone"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_q77pa")
+
+[node name="stoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Stone"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Stone"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="Weed" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Weed"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_c6dx3")
+
+[node name="weedLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Weed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Weed"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="Tomato" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Tomato"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_0wyng")
+
+[node name="tomatoLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Tomato"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Tomato"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="Egg" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Egg"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_jtt4m")
+
+[node name="eggLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Egg"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Egg"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="Milk" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/Milk"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_asf2l")
+
+[node name="milkLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/Milk"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/Milk"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="weedSeed" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/weedSeed"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_qwmcr")
+
+[node name="weedSeedLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/weedSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/weedSeed"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="tomatoSeed" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/tomatoSeed"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_ijs1t")
+
+[node name="tomatoSeedLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/tomatoSeed"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 2
+
+[node name="ClickButton" type="Button" parent="InventoryPanel/MarginContainer/GridContainer/tomatoSeed"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+flat = true
+
+[node name="empty3" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/empty3"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/empty3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+vertical_alignment = 2
+
+[node name="empty4" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/empty4"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/empty4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+vertical_alignment = 2
+
+[node name="empty5" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/empty5"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/empty5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+vertical_alignment = 2
+
+[node name="empty6" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/empty6"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/empty6"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+vertical_alignment = 2
+
+[node name="Panel3" type="Panel" parent="InventoryPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2n5f6")
+
+[node name="empty7" type="PanelContainer" parent="InventoryPanel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 58)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="InventoryPanel/MarginContainer/GridContainer/empty7"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="StoneLabel" type="Label" parent="InventoryPanel/MarginContainer/GridContainer/empty7"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+vertical_alignment = 2
+
+[node name="Panel4" type="Panel" parent="InventoryPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="ToolBarPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(100, 300)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -208.0
+offset_right = -33.0
+offset_bottom = 210.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"DarkWoodPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="ToolBarPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ToolBarPanel/MarginContainer"]
+custom_minimum_size = Vector2(26, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="empty" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+
+[node name="axeButton" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+icon = SubResource("AtlasTexture_i1vam")
+icon_alignment = 1
+expand_icon = true
+
+[node name="tillingButton" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+icon = SubResource("AtlasTexture_n8582")
+icon_alignment = 1
+expand_icon = true
+
+[node name="wateringButton" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+icon = SubResource("AtlasTexture_jqn02")
+icon_alignment = 1
+expand_icon = true
+
+[node name="cornseedButton" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+icon = SubResource("AtlasTexture_foiwe")
+icon_alignment = 1
+expand_icon = true
+
+[node name="tomatoseedButton" type="Button" parent="ToolBarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(26, 60)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+icon = SubResource("AtlasTexture_3ujc7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="PauseMenu"]
+custom_minimum_size = Vector2(580, 480)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -932.00006
+offset_top = -530.0
+offset_right = 962.99994
+offset_bottom = 538.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9915702, 1)
+color = Color(0, 0, 0, 0.07058824)
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.00003
+offset_top = -100.0
+offset_right = 85.99997
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"SettingsPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="PauseMenü" type="Label" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Pause Menü "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+position = Vector2(131.25703, 59.19657)
+scale = Vector2(1.3437507, 1.3437507)
+sprite_frames = SubResource("SpriteFrames_3mirh")
+animation = &"idle_front"
+autoplay = "idle_front"
+frame_progress = 0.97027546
+
+[node name="Label" type="Label" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+theme_override_constants/outline_size = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+text = "Continue"
+
+[node name="SettingsButton" type="Button" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+text = "Settings
+"
+
+[node name="SaveQuitButton" type="Button" parent="PauseMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+text = "Save & Quit"
+
+[node name="SettingsMenu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = 25.0
+offset_right = 46.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = -218.25
+offset_top = -149.5
+offset_right = 309.75
+offset_bottom = 149.5
+mouse_filter = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"SettingsPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HeadlineSettings" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("3_g6l6n")
+text = "Settings"
+
+[node name="Label2" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="LabelMusicVolume" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"SettingsLabel"
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_5xurb")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_7ajnb")
+theme_override_icons/tick = SubResource("AtlasTexture_vwijv")
+theme_override_styles/slider = SubResource("StyleBoxTexture_d5rvm")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1oyfl")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_rknla")
+max_value = 1.0
+step = 0.01
+value = 0.8
+
+[node name="LabelSFX_Volume" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"SettingsLabel"
+text = "Sound Effects"
+
+[node name="SfxSlider" type="HSlider" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_3mirh")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_7ajnb")
+theme_override_icons/tick = SubResource("AtlasTexture_vwijv")
+theme_override_styles/slider = SubResource("StyleBoxTexture_7ajnb")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1oyfl")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_rknla")
+max_value = 1.0
+step = 0.01
+value = 0.8
+
+[node name="Label3" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackFromSettingsButton" type="Button" parent="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"ToolButton"
+theme_override_font_sizes/font_size = 14
+toggle_mode = true
+text = "Back"
+
+[node name="DayTime" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 0.185
+anchor_right = 1.0
+anchor_bottom = 0.185
+offset_left = -206.0
+offset_top = 11.199997
+offset_right = -17.0
+offset_bottom = 51.199997
+grow_horizontal = 0
+
+[node name="TimePanel" type="Panel" parent="DayTime"]
+custom_minimum_size = Vector2(50, 35)
+layout_mode = 0
+offset_left = 115.0
+offset_top = 26.0
+offset_right = 186.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qwmcr")
+
+[node name="TimeLabel" type="Label" parent="DayTime/TimePanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 47.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("FontVariation_ijs1t")
+theme_override_font_sizes/font_size = 20
+
+[node name="dayPanel" type="Panel" parent="DayTime"]
+custom_minimum_size = Vector2(60, 35)
+layout_mode = 0
+offset_left = 83.0
+offset_top = -3.0
+offset_right = 186.0
+offset_bottom = 35.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ftypo")
+
+[node name="DayLabel" type="Label" parent="DayTime/dayPanel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 50.0
+offset_bottom = 29.0
+theme_override_fonts/font = SubResource("FontVariation_jwaoy")
+theme_override_font_sizes/font_size = 20
+
+[node name="MiniMapViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="MiniMapCamera" type="Camera2D" parent="MiniMapViewport" groups=["MiniMapCamera"]]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-787, 282)
+limit_enabled = false
+position_smoothing_enabled = true
+script = ExtResource("13_foiwe")
+
+[node name="MinimapPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -216.0
+offset_top = 11.0
+offset_right = -16.0
+offset_bottom = 211.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0wyng")
+
+[node name="MiniMapIcon" type="Sprite2D" parent="MinimapPanel"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+position = Vector2(104, 100)
+texture = SubResource("AtlasTexture_1oyfl")
+
+[node name="ViewPortTexture" type="TextureRect" parent="MinimapPanel"]
+layout_mode = 2
+texture = SubResource("ViewportTexture_c6dx3")
+expand_mode = 1
+
+[node name="ChestInventoryPanel" type="PanelContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(590, 490)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.0
+offset_top = -202.375
+offset_right = 313.0
+offset_bottom = 287.625
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"DarkWoodPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="ChestInventoryPanel"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ChestInventoryPanel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jwaoy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChestInventoryPanel/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+
+[node name="ÜberschriftChest" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 33
+text = "Kiste"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 44
+
+[node name="GridContainer" type="GridContainer" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 14
+columns = 7
+
+[node name="SlotButton_0" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_0"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_0"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_1" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_1"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_1"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_2" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_2"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_2"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 36.0
+offset_right = 34.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_3" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_3"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_3"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_4" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_4"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_4"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_5" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_5"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_5"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_6" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_6"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_6"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_7" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_7"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_7"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_8" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_8"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_8"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_9" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_9"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_9"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_10" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_10"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_10"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 36.0
+offset_right = 34.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_11" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_11"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_11"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_12" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_12"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_12"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_13" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_13"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_13"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_14" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_14"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_14"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_15" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_15"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_15"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 44.0
+offset_right = 30.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_16" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_16"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_16"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 44.0
+offset_right = 30.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_17" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_17"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_17"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 44.0
+offset_right = 34.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_18" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_18"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_18"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 44.0
+offset_right = 30.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_19" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_19"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_19"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 44.0
+offset_right = 30.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_20" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_20"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_20"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 44.0
+offset_right = 30.0
+offset_bottom = 62.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="Panel" type="Panel" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0p2jk")
+
+[node name="SlotButton_21" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_21"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_21"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_22" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_22"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_22"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_23" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_23"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_23"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 36.0
+offset_right = 34.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_24" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_24"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_24"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="SlotButton_25" type="Button" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(60, 61)
+layout_mode = 2
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryItemPanel"
+theme_override_styles/normal = SubResource("StyleBoxTexture_if70d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6x225")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ks4ns")
+script = ExtResource("15_3ujc7")
+
+[node name="TextureRect" type="TextureRect" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_25"]
+custom_minimum_size = Vector2(37, 37)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 56.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer/SlotButton_25"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 36.0
+offset_right = 30.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("3_g6l6n")
+theme_type_variation = &"InventoryLabel"
+theme_override_font_sizes/font_size = 17
+
+[node name="Panel2" type="Panel" parent="ChestInventoryPanel/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4suer")
+
+[node name="DragIcon" type="TextureRect" parent="."]
+visible = false
+z_index = 30
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 4
+
+[connection signal="pressed" from="PauseMenu/PanelContainer/MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PauseMenu/PanelContainer/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="PauseMenu/PanelContainer/MarginContainer/VBoxContainer/SaveQuitButton" to="." method="_on_save_quit_button_pressed"]
+[connection signal="value_changed" from="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/MusicSlider" to="." method="OnMusicVolumeChanged"]
+[connection signal="value_changed" from="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/SfxSlider" to="." method="OnSfxVolumeChanged"]
+[connection signal="pressed" from="SettingsMenu/PanelContainer/MarginContainer/VBoxContainer/BackFromSettingsButton" to="." method="_on_back_button_pressed"]

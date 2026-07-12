@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://cuk3w6y4k5efe"]
+
+[ext_resource type="Texture2D" uid="uid://k7yu2fea7mn3" path="res://alex_mapUSW/asset/game/objects/Basic Grass Biom things 1.png" id="1_hxmqd"]
+[ext_resource type="Script" uid="uid://dsgy6feprfp4l" path="res://alex_mapUSW/szenes/kleinesbaum.cs" id="2_hxmqd"]
+[ext_resource type="PackedScene" uid="uid://bi5f4p8q5nsjn" path="res://alex_mapUSW/Componenten/Log.tscn" id="3_53gp4"]
+[ext_resource type="PackedScene" uid="uid://cvg0f5g5nmbf7" path="res://alex_mapUSW/Componenten/hurt_component.tscn" id="4_10s62"]
+[ext_resource type="PackedScene" uid="uid://qnlatwsnv6l3" path="res://alex_mapUSW/Componenten/damage_component.tscn" id="5_jnnxd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfha2"]
+atlas = ExtResource("1_hxmqd")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qflx"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxpet"]
+size = Vector2(8, 29)
+
+[node name="mittelsbaum" type="Sprite2D"]
+position = Vector2(0, -15)
+texture = SubResource("AtlasTexture_qfha2")
+script = ExtResource("2_hxmqd")
+LogScene = ExtResource("3_53gp4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_2qflx")
+
+[node name="HurtComponent" parent="." instance=ExtResource("4_10s62")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_wxpet")
+debug_color = Color(0.80454445, 0.28807327, 0.75945896, 0.41960785)
+
+[node name="DamageComponent" parent="." instance=ExtResource("5_jnnxd")]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1avm8iuvvle6"]
+
+[ext_resource type="Texture2D" uid="uid://b8rd86euag53o" path="res://sprites/pixel_art_large (4).png" id="1_0ykhv"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -257.0
+offset_top = -2.0
+offset_right = 1596.0
+offset_bottom = 648.0
+texture = ExtResource("1_0ykhv")
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 219.0
+offset_top = 285.0
+offset_right = 974.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2

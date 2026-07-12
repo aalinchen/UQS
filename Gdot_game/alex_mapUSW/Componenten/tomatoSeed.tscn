@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8h8jtvsjuo2b"]
+
+[ext_resource type="Script" uid="uid://cl5olox7iole8" path="res://alex_mapUSW/scripts/WorldItem.cs" id="1_3v35g"]
+[ext_resource type="Texture2D" uid="uid://d3fdi3rrkoj15" path="res://alex_mapUSW/asset/game/objects/basic_plants.png" id="2_2jxyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mh5l"]
+atlas = ExtResource("2_2jxyc")
+region = Rect2(2, 18, 12, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfdpl"]
+size = Vector2(8, 8)
+
+[node name="TomatoSeed" type="Area2D"]
+script = ExtResource("1_3v35g")
+ItemId = "tomato_seed"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.7763568e-15, -5)
+scale = Vector2(0.6875, 0.6875)
+texture = SubResource("AtlasTexture_0mh5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_bfdpl")

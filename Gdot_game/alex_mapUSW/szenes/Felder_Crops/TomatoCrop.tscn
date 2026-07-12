@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://i7mgtb4yr20s"]
+
+[ext_resource type="Script" uid="uid://bb0yumiwd6pdg" path="res://alex_mapUSW/szenes/Felder_Crops/Crop.cs" id="1_mr3g8"]
+[ext_resource type="Texture2D" uid="uid://c8rr4b26mclkj" path="res://alex_mapUSW/asset/game/objects/Basic Plants.png" id="2_nkhbe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yymtn"]
+atlas = ExtResource("2_nkhbe")
+region = Rect2(22, 26, 5, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsr2n"]
+atlas = ExtResource("2_nkhbe")
+region = Rect2(36, 22, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41hqm"]
+atlas = ExtResource("2_nkhbe")
+region = Rect2(49, 19, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl5rx"]
+atlas = ExtResource("2_nkhbe")
+region = Rect2(65, 18, 14, 14)
+
+[node name="Crop" type="Node2D"]
+script = ExtResource("1_mr3g8")
+CropItemId = "tomato"
+SeedItemId = "tomato_seed"
+GrowthStages = Array[Texture2D]([SubResource("AtlasTexture_yymtn"), SubResource("AtlasTexture_fsr2n"), SubResource("AtlasTexture_41hqm"), SubResource("AtlasTexture_tl5rx")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvg0f5g5nmbf7"]
+
+[ext_resource type="Script" uid="uid://cy03ntqnpvcms" path="res://alex_mapUSW/Componenten/HurtComponent.cs" id="1_4xfrq"]
+
+[node name="HurtComponent" type="Area2D"]
+script = ExtResource("1_4xfrq")
+Tool = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

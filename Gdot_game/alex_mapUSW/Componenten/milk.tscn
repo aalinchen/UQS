@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfu4ftnsojwic"]
+
+[ext_resource type="Script" uid="uid://cl5olox7iole8" path="res://alex_mapUSW/scripts/WorldItem.cs" id="1_medt7"]
+[ext_resource type="Texture2D" uid="uid://cax3omfs7wqev" path="res://alex_mapUSW/asset/game/objects/Simple Milk and grass item.png" id="2_medt7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jn7s"]
+atlas = ExtResource("2_medt7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_noevh"]
+radius = 4.0
+height = 10.0
+
+[node name="Milk" type="Area2D"]
+script = ExtResource("1_medt7")
+ItemId = "milk"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.7763568e-15, -5)
+scale = Vector2(0.6875, 0.6875)
+texture = SubResource("AtlasTexture_2jn7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_noevh")

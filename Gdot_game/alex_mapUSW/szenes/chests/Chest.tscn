@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://v6ekjybtww3a"]
+
+[ext_resource type="Script" uid="uid://bagkim0i2n7qf" path="res://alex_mapUSW/szenes/chests/Chest.cs" id="1_o3gy5"]
+[ext_resource type="Texture2D" uid="uid://b6rsq1xtpnkd7" path="res://alex_mapUSW/asset/game/objects/chest.png" id="2_j1nyq"]
+[ext_resource type="Script" uid="uid://csgxdgd8gqv1m" path="res://alex_mapUSW/szenes/chests/ChestInventory.cs" id="3_j1nyq"]
+[ext_resource type="Texture2D" uid="uid://bhjbas7lgvu0h" path="res://alex_mapUSW/asset/ui/Basic_ui_sprites.png" id="4_wmhrl"]
+[ext_resource type="Texture2D" uid="uid://dt4ywleyuv4xk" path="res://alex_mapUSW/asset/ui/Text2.png" id="5_sjeub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dty8e"]
+atlas = ExtResource("2_j1nyq")
+region = Rect2(63, 62, 13, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmhrl"]
+size = Vector2(7.5, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28qei"]
+atlas = ExtResource("4_wmhrl")
+region = Rect2(709, 36, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43rtp"]
+texture = SubResource("AtlasTexture_28qei")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdudb"]
+atlas = ExtResource("5_sjeub")
+region = Rect2(21, 96, 4, 6)
+
+[node name="Chest" type="Area2D" node_paths=PackedStringArray("InteractHint")]
+script = ExtResource("1_o3gy5")
+InteractHint = NodePath("InteractHint")
+metadata/_edit_vertical_guides_ = [6.0]
+metadata/_edit_horizontal_guides_ = [-9.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_dty8e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.75, 0)
+shape = SubResource("RectangleShape2D_wmhrl")
+
+[node name="ChestInventory" type="Node" parent="."]
+script = ExtResource("3_j1nyq")
+ChestId = "house_chest_01"
+
+[node name="InteractHint" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = 7.0
+offset_top = -16.0
+offset_right = 17.0
+offset_bottom = -5.0
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_43rtp")
+
+[node name="TextureRect" type="TextureRect" parent="InteractHint"]
+layout_mode = 1
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 7.0
+offset_bottom = 8.0
+texture = SubResource("AtlasTexture_mdudb")

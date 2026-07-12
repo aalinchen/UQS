@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://clgpsrfqj5a0b"]
+
+[ext_resource type="Texture2D" uid="uid://d3fdi3rrkoj15" path="res://alex_mapUSW/asset/game/objects/basic_plants.png" id="1_c15w7"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_5oeul"]
+script/source = "using Godot;
+
+public partial class SoilTile : Area2D
+{
+	private bool tilled = false;
+	private bool watered = false;
+	private Plant plant;
+
+	[Export] public Sprite2D SoilSprite;
+	[Export] public PackedScene PlantScene;
+	[Export] public Marker2D PlantSpawn;
+
+	public void Interact(Player.ToolType tool, SeedData seed)
+	{
+		switch (tool)
+		{
+			case Player.ToolType.Tilling:
+				Till();
+				break;
+
+			case Player.ToolType.Watering:
+				Water();
+				break;
+
+			case Player.ToolType.Chopping:
+				Harvest();
+				break;
+
+			case Player.ToolType.None:
+				if (seed != null)
+					PlantSeed(seed);
+				break;
+		}
+	}
+
+	private void Till()
+	{
+		if (tilled) return;
+		tilled = true;
+		SoilSprite.Frame = 1;
+	}
+
+	private void PlantSeed(SeedData seed)
+	{
+		if (!tilled || plant != null) return;
+
+		plant = seed.PlantScene.Instantiate<Plant>();
+		plant.Data = seed;
+		PlantSpawn.AddChild(plant);
+	}
+
+	private void Water()
+	{
+		if (!tilled) return;
+
+		watered = true;
+		SoilSprite.Frame = 2;
+		plant?.Water();
+	}
+
+	private void Harvest()
+	{
+		if (plant == null || !plant.IsFullyGrown())
+			return;
+
+		plant.QueueFree();
+		plant = null;
+		SoilSprite.Frame = 1;
+	}
+}
+"
+
+[node name="Soiltile" type="Area2D"]
+script = SubResource("CSharpScript_5oeul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c15w7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]

@@ -1,0 +1,157 @@
+[gd_scene load_steps=22 format=3 uid="uid://twq5ekg510ap"]
+
+[ext_resource type="Script" uid="uid://bidhrg35hrrsr" path="res://scenes/Trees/Tree.cs" id="1_omb14"]
+[ext_resource type="Texture2D" uid="uid://dyf6mhiit2qg0" path="res://sprites/Trees_animation.png" id="2_874r4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvbew"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gtcl"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 80, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0kve"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 160, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i8fu"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 240, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuee5"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 320, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ego7h"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 400, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0q6n"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 480, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ummhw"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 560, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82hvc"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 640, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jogim"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 720, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0vib"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 800, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f177d"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 880, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40k2b"]
+atlas = ExtResource("2_874r4")
+region = Rect2(0, 960, 64, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qa1o"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvbew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gtcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0kve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i8fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuee5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ego7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0q6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ummhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jogim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0vib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f177d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40k2b")
+}],
+"loop": false,
+"name": &"idle_tree",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_0kndq"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_7fj2n"]
+resource_name = "idle_tree"
+length = 2.1
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kst3p"]
+_data = {
+&"RESET": SubResource("Animation_0kndq"),
+&"idle_tree": SubResource("Animation_7fj2n")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtr68"]
+size = Vector2(11, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1sli"]
+size = Vector2(23, 6)
+
+[node name="Tree" type="Node2D"]
+script = ExtResource("1_omb14")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(2.3841858e-07, -1.1920929e-07)
+scale = Vector2(0.5834961, 0.5834961)
+sprite_frames = SubResource("SpriteFrames_8qa1o")
+animation = &"idle_tree"
+speed_scale = 0.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kst3p")
+}
+speed_scale = 0.279
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0.5, 10)
+shape = SubResource("RectangleShape2D_rtr68")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 16)
+shape = SubResource("RectangleShape2D_s1sli")

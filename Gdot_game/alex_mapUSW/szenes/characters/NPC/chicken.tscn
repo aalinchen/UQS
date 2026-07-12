@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://rsi0q0uu3ax1"]
+
+[ext_resource type="Texture2D" uid="uid://dhr4am0mlehlr" path="res://alex_mapUSW/asset/game/characters/chicken_sprites.png" id="1_02yqa"]
+[ext_resource type="Script" uid="uid://bdav3t3gks565" path="res://alex_mapUSW/szenes/characters/NPC/Chicken.cs" id="1_jnu4a"]
+[ext_resource type="PackedScene" uid="uid://cam68lhn5q2p3" path="res://alex_mapUSW/Componenten/egg.tscn" id="2_50b5a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnu4a"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50b5a"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bliij"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrot1"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcgq1"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p5ws"]
+atlas = ExtResource("1_02yqa")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bliij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnu4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50b5a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bliij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrot1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcgq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p5ws")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jnu4a"]
+radius = 9.0
+
+[node name="Chicken" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_jnu4a")
+sprite = NodePath("AnimatedSprite2D")
+EggScene = ExtResource("2_50b5a")
+MinEggTime = 30.0
+MaxEggTime = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_bliij")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_jnu4a")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

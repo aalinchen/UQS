@@ -1,0 +1,118 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwj7djwellnrd"]
+
+[ext_resource type="Script" uid="uid://c1qef0xx4p3dv" path="res://scenes/IntroDialogue.cs" id="1_i3qhk"]
+[ext_resource type="Texture2D" uid="uid://c4yrqd460e7di" path="res://sprites/backgroundMain.png" id="2_vg432"]
+[ext_resource type="Texture2D" uid="uid://dbu8fk2btrj3j" path="res://sprites/StoryElior.png" id="3_vg432"]
+[ext_resource type="Texture2D" uid="uid://wvvn2ioafagc" path="res://sprites/textbox.png" id="4_ghd7h"]
+[ext_resource type="FontFile" uid="uid://devig0eu2yk63" path="res://sprites/Super Pixel Personal Use.ttf" id="5_gv04a"]
+[ext_resource type="FontFile" uid="uid://cnrgsq64bu4tk" path="res://sprites/Pixellari.ttf" id="6_ric6n"]
+[ext_resource type="Texture2D" uid="uid://tgqal8onpw82" path="res://sprites/DialogueButton.png" id="7_ghd7h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mwcd"]
+texture = ExtResource("4_ghd7h")
+modulate_color = Color(1, 1, 1, 0.8784314)
+
+[sub_resource type="FontVariation" id="FontVariation_34yto"]
+base_font = ExtResource("5_gv04a")
+
+[sub_resource type="FontVariation" id="FontVariation_vg432"]
+base_font = ExtResource("6_ric6n")
+
+[sub_resource type="Animation" id="Animation_vg432"]
+resource_name = "blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueArrow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ghd7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueArrow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gv04a"]
+_data = {
+&"RESET": SubResource("Animation_ghd7h"),
+&"blink": SubResource("Animation_vg432")
+}
+
+[node name="IntroDialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i3qhk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.8849199, 0.9501354, 0.9501297, 1)
+layout_mode = 0
+offset_right = 2461.3638
+offset_bottom = 1083.0
+texture = ExtResource("2_vg432")
+
+[node name="Elior" type="Sprite2D" parent="."]
+modulate = Color(0.9471994, 0.9471994, 0.9471994, 0.92156863)
+position = Vector2(259, 935)
+scale = Vector2(0.6073431, 0.6814898)
+texture = ExtResource("3_vg432")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 84.0
+offset_right = 1762.0
+offset_bottom = 1112.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5mwcd")
+
+[node name="NameLabel" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 141.0
+offset_right = 274.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.5454184, 0.34960142, 0.26405683, 1)
+theme_override_fonts/font = SubResource("FontVariation_34yto")
+theme_override_font_sizes/font_size = 35
+text = "Elior: 
+"
+
+[node name="TextLabel" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 193.0
+offset_right = 1158.0
+offset_bottom = 655.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_vg432")
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="ContinueArrow" type="TextureRect" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 1151.0
+offset_top = 585.0
+offset_right = 1212.0
+offset_bottom = 652.45886
+texture = ExtResource("7_ghd7h")
+expand_mode = 1
+
+[node name="ArrowAnimation" type="AnimationPlayer" parent="DialogueBox"]
+libraries = {
+&"": SubResource("AnimationLibrary_gv04a")
+}

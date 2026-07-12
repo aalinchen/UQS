@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://yj0crhi3h1e6"]
+
+[ext_resource type="Texture2D" uid="uid://dyf6mhiit2qg0" path="res://sprites/Trees_animation.png" id="1_sfprd"]
+
+[resource]
+atlas = ExtResource("1_sfprd")
+region = Rect2(321, 38, 30, 40)

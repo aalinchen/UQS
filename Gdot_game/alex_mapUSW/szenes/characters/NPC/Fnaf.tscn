@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://copf6rkhnlsq5"]
+
+[ext_resource type="Script" uid="uid://bdav3t3gks565" path="res://alex_mapUSW/szenes/characters/NPC/Chicken.cs" id="1_iq487"]
+[ext_resource type="Texture2D" uid="uid://2w5xu0cnlq61" path="res://alex_mapUSW/asset/game/characters/sprites_fnaf_movie_and_play_by_wardenytmc_dgdntss.png" id="2_iq487"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vywvv"]
+atlas = ExtResource("2_iq487")
+region = Rect2(844, 176, 39, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bliij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vywvv")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrhsf"]
+size = Vector2(12, 9)
+
+[node name="Cow" type="CharacterBody2D"]
+script = ExtResource("1_iq487")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.0000005, -15)
+scale = Vector2(0.7115385, 0.71153855)
+sprite_frames = SubResource("SpriteFrames_bliij")
+animation = &"new_animation"
+frame_progress = 0.32149693
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_lrhsf")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

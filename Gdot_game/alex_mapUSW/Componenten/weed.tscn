@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbqavpk6um0i3"]
+
+[ext_resource type="Script" uid="uid://cl5olox7iole8" path="res://alex_mapUSW/scripts/WorldItem.cs" id="1_2gp6u"]
+[ext_resource type="Texture2D" uid="uid://d3fdi3rrkoj15" path="res://alex_mapUSW/asset/game/objects/basic_plants.png" id="2_2gp6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2vgj"]
+atlas = ExtResource("2_2gp6u")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_khu8w"]
+a = Vector2(5, 2)
+b = Vector2(-2, 10)
+
+[node name="Weed" type="Area2D"]
+script = ExtResource("1_2gp6u")
+ItemId = "weed"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.7763568e-15, -5)
+scale = Vector2(0.6875, 0.6875)
+texture = SubResource("AtlasTexture_s2vgj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -11)
+shape = SubResource("SegmentShape2D_khu8w")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvwtcopaa0yss"]
+
+[ext_resource type="Script" uid="uid://bb0yumiwd6pdg" path="res://alex_mapUSW/szenes/Felder_Crops/Crop.cs" id="1_mq3hs"]
+[ext_resource type="Texture2D" uid="uid://c8rr4b26mclkj" path="res://alex_mapUSW/asset/game/objects/Basic Plants.png" id="2_00xmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0w7d"]
+atlas = ExtResource("2_00xmo")
+region = Rect2(17, 7, 13, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em7h6"]
+atlas = ExtResource("2_00xmo")
+region = Rect2(33, 3, 15, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olk1r"]
+atlas = ExtResource("2_00xmo")
+region = Rect2(49, 1, 15, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttvq3"]
+atlas = ExtResource("2_00xmo")
+region = Rect2(65, 0, 15, 15)
+
+[node name="Crop" type="Node2D"]
+script = ExtResource("1_mq3hs")
+CropItemId = "weed"
+SeedItemId = "weed_seed"
+GrowthStages = Array[Texture2D]([SubResource("AtlasTexture_i0w7d"), SubResource("AtlasTexture_em7h6"), SubResource("AtlasTexture_olk1r"), SubResource("AtlasTexture_ttvq3")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

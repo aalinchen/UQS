@@ -1,253 +1,203 @@
-# Under Quiet Skies
+<div align="center">
 
-## Projektbeschreibung
+# 🌙 Under Quiet Skies ✨
 
-**Under Quiet Skies** ist ein 2D-Spielprojekt, das im Rahmen eines Schulprojekts mit der **Godot Engine 4** entwickelt wurde.  
-Ziel des Projekts war es, grundlegende Kenntnisse in Game Design, Projektplanung und Programmierung anzuwenden und zu vertiefen.
+*Ein leises 2D-Spiel unterm Sternenhimmel — gebaut mit Godot 4*
 
-Das Spiel legt den Fokus auf eine ruhige Atmosphäre, Erkundung und die Umsetzung eines funktionierenden Inventarsystems.
+![Engine](https://img.shields.io/badge/Godot-4.x-ff2ea6?style=for-the-badge&logo=godotengine&logoColor=white)
+![Language](https://img.shields.io/badge/GDScript-💖-c9b6ff?style=for-the-badge)
+![Style](https://img.shields.io/badge/Style-2D-ffe9a8?style=for-the-badge)
+![Team](https://img.shields.io/badge/Team-Ich%20%26%20Alex-ff8fd0?style=for-the-badge)
 
----
+```
+· · · · · · · · · · · · · · · · · · · · · · · ·
+  ⋆｡°✩  ⁺ ✩  °｡⋆   🌙   ⋆｡° ✩⁺  ✩ °｡⋆
+· · · · · · · · · · · · · · · · · · · · · · · ·
+```
 
-## Verwendete Technologien
+</div>
 
-- **Game Engine:** Godot Engine 4
-- **Programmiersprache:** GDScript
-- **Grafikstil:** 2D
-- **Projektart:** Schulprojekt / Teamarbeit
+## 🪐 Worum geht's hier eigentlich?
 
----
+**Under Quiet Skies** ist im Rahmen eines Schulprojekts mit der **Godot Engine 4** entstanden. Ziel war es, Game Design, Projektplanung und Programmierung nicht nur zu lernen, sondern auch mal *wirklich anzuwenden*.
 
-## Projektstruktur
-
-Der Hauptordner des Projekts lautet:
-
-
-Der Ordner **Gdot_game** enthält das vollständige Godot-Projekt inklusive Szenen, Skripten, Assets und Einstellungen.
-
-### Wichtige Inhalte:
-
-- **Assets:** Grafiken für Charaktere, Umgebung und Benutzeroberfläche
-- **Szenen:** Spielwelten, MainScene und Ladebildschirm
-- **UI:** Inventarsystem und Menüs
-- **Skripte:** Spiellogik und Steuerung
+> 🌌 **Vibe-Check:** ruhige Atmosphäre, viel Erkunden, und ein Inventarsystem, das tatsächlich funktioniert — kein Platzhalter-Quatsch.
 
 ---
 
-## Spielmechaniken
+## 🧰 Der Werkzeugkasten
 
-- Spielerbewegung
-- Szenenwechsel (inkl. Loadingscreen)
-- Inventarsystem mit Benutzeroberfläche
-- Interaktion zwischen Spieler und UI
-- Erkunden einer selbst erstellten Spielwelt (Map)
-
----
-
-## Arbeitsaufteilung
-
-### Eigener Aufgabenbereich
-
-- Planung und Organisation des gesamten Projekts
-- Gestaltung des gesamten Spieldesigns
-- Erstellung der Spielwelt / Map (eigenständig)
-- Auswahl der grafischen Assets (gemeinsam im Team)
-- Umsetzung der Szenenstruktur
-  - MainScene
-  - Loadingscreen
-  - Szenen- und Levelwechsel
-- Aufbau der Projektstruktur in Godot
-
-### Aufgabenbereich von Alex
-
-- Hauptverantwortlich für die Programmierung
-- Implementierung der Spielerbewegung
-- Umsetzung der Spielerfunktionen
-- Verbindung des Spielers mit dem Inventar-UI
-- Logik für die Zusammenarbeit zwischen Player und UI
-
-> Hinweis: Ein Kisten- oder Container-System wurde nicht umgesetzt.
+| | |
+|---|---|
+| 🎮 **Engine** | Godot Engine 4 |
+| 📜 **Sprache** | GDScript |
+| 🖼️ **Grafikstil** | 2D |
+| 🎓 **Projektart** | Schulprojekt / Teamarbeit |
 
 ---
 
-## Projektstart
+## 🗂️ Wo sich alles versteckt
 
-1. Godot Engine 4 öffnen  
-2. Auf **„Importieren“** klicken  
-3. Den Ordner **Gdot_game** auswählen  
-4. Projekt über die MainScene starten  
+Der Hauptordner heißt schlicht `Gdot_game` und enthält das komplette Godot-Projekt.
 
----
+<details>
+<summary>📦 <strong>Inhalt anzeigen</strong> (klick mich)</summary>
 
-## Hinweise
+- 🖼️ **Assets** — Grafiken für Charaktere, Umgebung, UI
+- 🗺️ **Szenen** — Spielwelten, MainScene, Loadingscreen
+- 🎒 **UI** — Inventarsystem und Menüs
+- ⚙️ **Skripte** — die eigentliche Magie dahinter
 
-- Enthaltene `.DS_Store` Dateien stammen vom Betriebssystem und haben keinen Einfluss auf das Projekt
-- Das Projekt dient ausschließlich schulischen Zwecken
-- Erweiterungen sind möglich, jedoch nicht Teil des aktuellen Projektstands
-
----
-
-## Fazit
-
-Das Projekt **Under Quiet Skies** zeigt die erfolgreiche Zusammenarbeit im Team sowie die Umsetzung eines vollständigen Spielprojekts mit Godot 4.  
-Dabei wurden sowohl technische als auch kreative Aspekte der Spieleentwicklung berücksichtigt.
-
-## Gesamte Programmerkennung und technische Umsetzung
-
-Dieses Kapitel beschreibt den vollständigen technischen Aufbau des Projekts **Under Quiet Skies**. Es erklärt die Funktionsweise der einzelnen Systeme, deren Zusammenspiel sowie die grundlegenden Programmierkonzepte, die im Projekt verwendet wurden.
+</details>
 
 ---
 
-## Entwicklungsumgebung
+## ✨ Was man im Spiel so tun kann
 
-Das Spiel wurde mit der **Godot Engine 4** entwickelt.  
-Die gesamte Spiellogik basiert auf **GDScript**, einer von Godot bereitgestellten, objektorientierten Programmiersprache, die speziell für Spiele entwickelt wurde.
-
----
-
-## Grundprinzip: Szenen- und Node-System
-
-Godot verwendet ein **Szenen-Node-System**:
-
-- Eine **Szene** ist eine in sich geschlossene Einheit (z. B. Spieler, UI, Map)
-- Eine Szene besteht aus mehreren **Nodes**
-- Jeder Node hat eine klar definierte Aufgabe
-
-Beispiele für verwendete Node-Typen:
-- `Node2D` → Basis für Spielobjekte
-- `CharacterBody2D` → Spieler mit Bewegung und Kollision
-- `TileMap` → Spielwelt
-- `CanvasLayer` → Benutzeroberfläche (UI)
-- `Control` → UI-Elemente
-
-Diese Struktur sorgt für Übersichtlichkeit und Wiederverwendbarkeit.
+- 🚶 Sich bewegen *(Grundvoraussetzung, aber wichtig)*
+- 🌀 Zwischen Szenen wechseln, inklusive Loadingscreen statt Cliffhanger
+- 🎒 Ein Inventar öffnen, befüllen, bestaunen
+- 💬 Mit der UI interagieren, ohne dass etwas explodiert
+- 🌙 Eine selbstgebaute Spielwelt erkunden
 
 ---
 
-## Spieler (Player)
+## 🤝 Wer hat was gebaut?
 
-Der Spieler ist als eigene Szene umgesetzt und basiert auf einem `CharacterBody2D`.
+<table>
+<tr>
+<td valign="top" width="50%">
 
-### Aufgaben des Spieler-Codes:
-- Verarbeiten von Tastatureingaben
-- Bewegung in der Spielwelt
-- Kollisionsabfrage mit der Map
-- Kommunikation mit dem Inventarsystem
+### 🌸 Mein Revier
 
-### Bewegung:
-- Die Bewegung wird in der Funktion `_physics_process(delta)` berechnet
-- Eingaben werden über das Input-System von Godot abgefragt
-- Die Geschwindigkeit wird über Vektoren gesteuert
-- Kollisionen werden automatisch durch die Physik-Engine behandelt
+- Projektplanung & -organisation
+- Gesamtes Spieldesign
+- Die komplette Spielwelt / Map, eigenhändig gepixelt
+- Grafik-Asset-Auswahl *(im Team)*
+- Szenenstruktur: MainScene, Loadingscreen, Levelwechsel
+- Projektstruktur in Godot aufgebaut
 
-Die Spiellogik ist so aufgebaut, dass sie leicht erweitert werden kann (z. B. Sprinten, Animationen).
+</td>
+<td valign="top" width="50%">
+
+### ⚡ Alex' Revier
+
+- Hauptverantwortlich fürs Programmieren
+- Spielerbewegung implementiert
+- Spielerfunktionen umgesetzt
+- Spieler mit dem Inventar-UI verkabelt
+- Logik, damit Player und UI sich verstehen
+
+</td>
+</tr>
+</table>
+
+> 🙈 **Disclaimer:** Ein Kisten- oder Container-System gibt es nicht. Bewusst weggelassen, nicht vergessen — versprochen.
 
 ---
 
-## Inventarsystem
+## 🚀 Und los geht's
 
-Das Inventar ist als **separate UI-Szene** umgesetzt und über einen `CanvasLayer` in das Spiel eingebunden.
+1. 🟢 Godot Engine 4 öffnen
+2. 📂 Auf **„Importieren"** klicken
+3. 📁 Den Ordner `Gdot_game` auswählen
+4. ▶️ Über die MainScene starten — fertig, viel Spaß
 
-### Funktionsweise:
-- Das Inventar kann per Tastendruck geöffnet und geschlossen werden
-- Die Inventardaten werden vom Spieler an das UI übergeben
-- Das UI stellt die Items visuell dar
-- Änderungen im Inventar werden direkt aktualisiert
+---
 
-### Technisches Konzept:
-- Trennung von **Datenlogik** (Spieler) und **Darstellung** (UI)
+## 🧾 Kleingedrucktes
+
+- 🍎 `.DS_Store`-Dateien sind nur Mac-Krümel und völlig harmlos
+- 🎓 Das Projekt ist rein schulischen Zwecken gewidmet
+- 🔧 Erweiterungen wären möglich, sind aber *(noch)* nicht Teil des aktuellen Stands
+
+---
+
+## 🎬 Fazit
+
+**Under Quiet Skies** beweist: Teamarbeit funktioniert, Godot 4 macht Spaß, und ein vollständiges Spielprojekt auf die Beine zu stellen ist machbar — solange man Kreativität und Technik unter einen Hut bringt.
+
+<div align="center">
+
+```
+· · · · · · · · · · · · · · · · · · · · · · · ·
+       ✩  T E C H N I S C H E R   T E I L  ✩
+· · · · · · · · · · · · · · · · · · · · · · · ·
+```
+
+</div>
+
+## 🔬 Jetzt wird's technisch: Die komplette Programmerkennung
+
+Dieses Kapitel geht ans Eingemachte: der vollständige technische Aufbau von **Under Quiet Skies**.
+
+### 🛠️ Die Entwicklungsumgebung
+
+Gebaut mit **Godot Engine 4**, gesteuert von **GDScript** — einer objektorientierten Sprache, die Godot extra für Spiele mitgebracht hat.
+
+### 🧩 Szenen & Nodes, das Dreamteam
+
+Godot tickt in **Szenen und Nodes**: Eine Szene ist eine geschlossene Einheit (Spieler, UI, Map), eine Szene besteht aus mehreren Nodes, und jeder Node hat genau einen Job.
+
+Ein paar Node-Promis aus dem Projekt:
+
+```
+Node2D            → das Fundament für so ziemlich alles
+CharacterBody2D    → der Spieler, inklusive Bewegung & Kollision
+TileMap            → die Spielwelt
+CanvasLayer        → die Benutzeroberfläche
+Control            → einzelne UI-Elemente
+```
+
+<details>
+<summary>🕹️ <strong>Der Spieler</strong> — Details anzeigen</summary>
+
+Eigene Szene, gebaut auf einem `CharacterBody2D`. Verarbeitet Tastatureingaben, bewegt sich durch die Welt, fragt Kollisionen ab und kommuniziert mit dem Inventarsystem.
+
+- Bewegung läuft über `_physics_process(delta)`
+- Eingaben kommen über Godots Input-System
+- Geschwindigkeit wird über Vektoren gesteuert
+- Kollisionen übernimmt die Physik-Engine automatisch
+
+</details>
+
+<details>
+<summary>🎒 <strong>Das Inventarsystem</strong> — Details anzeigen</summary>
+
+Lebt als eigene UI-Szene, eingebunden über einen `CanvasLayer`. Per Tastendruck auf- und zuklappbar, der Spieler liefert die Daten, die UI zeigt sie sofort an.
+
+- Klare Trennung von **Datenlogik** (Spieler) und **Darstellung** (UI)
 - Kommunikation über Variablen und Signale
-- Keine feste Kopplung zwischen Player und UI
+- Keine feste Verdrahtung zwischen Player und UI
 
-Diese Lösung ermöglicht eine saubere Struktur und einfache Erweiterungen.
+</details>
 
----
+<details>
+<summary>🪟 <strong>UI, Loadingscreen & Map</strong> — Details anzeigen</summary>
 
-## Benutzeroberfläche (UI)
+- UI besteht aus mehreren `Control`-Nodes und bleibt immer sichtbar, egal was in der Welt passiert
+- Szenenmanagement: aktive Szene beenden → Loadingscreen → neue Szene laden → nahtloser Übergang
+- Spielwelt via `TileMaps`, mehrere Layer (Boden, Objekte, Kollision), direkt an die Physik-Engine angebunden
 
-Die Benutzeroberfläche besteht aus mehreren `Control`-Nodes.
+</details>
 
-### Aufgaben:
-- Anzeige des Inventars
-- Darstellung von UI-Elementen
-- Reaktion auf Benutzereingaben
+### 🗃️ Projektstruktur, Teamarbeit & was fehlt
 
-Die UI ist unabhängig von der Spielwelt und bleibt stets sichtbar, unabhängig von der Kameraposition.
+Modular durch und durch: jede größere Funktion hat ihr eigenes Skript, Spieler/UI/Map sind sauber getrennt, Szenen klar benannt. Projektstruktur und Szenenorganisation wurden zentral geplant, die Spielerlogik entstand unabhängig von der UI.
 
----
-
-## Szenenmanagement und Loadingscreen
-
-Für den Wechsel zwischen Spielabschnitten wurde ein eigenes **Szenenmanagement** umgesetzt.
-
-### Ablauf:
-1. Aktive Szene wird beendet
-2. Loadingscreen wird angezeigt
-3. Neue Szene wird geladen
-4. Übergang zur Zielszene
-
-Dieser Ablauf sorgt für:
-- Saubere Übergänge
-- Keine sichtbaren Ladeunterbrechungen
-- Bessere Benutzererfahrung
+> ⏳ **Bewusst nicht umgesetzt:** Kisten-/Container-System und Item-Transfer zwischen Inventaren — Stoff für eine mögliche Fortsetzung.
 
 ---
 
-## Spielwelt und Map
+<div align="center">
 
-Die Spielwelt wurde mit **TileMaps** umgesetzt.
+### ✨ Technisches Fazit ✨
 
-### Eigenschaften:
-- Eigenständig erstellte Map
-- Mehrere Layer (Boden, Objekte, Kollision)
-- Klare Trennung zwischen visuellen Elementen und Kollisionen
+Godots Szenen-Node-System verstanden · Logik und Darstellung sauber getrennt
+GDScript strukturiert geschrieben · mehrere Spielsysteme, die tatsächlich miteinander reden
 
-Die Map ist direkt mit der Physik-Engine verbunden, wodurch der Spieler korrekt mit der Umgebung interagiert.
+```
+⋆｡°✩ ✩ ✩ °｡⋆   gute nacht, schlaft gut   ⋆｡° ✩ ✩ ✩ °｡⋆
+```
 
----
-
-## Projektstruktur und Organisation
-
-Das Projekt ist modular aufgebaut:
-
-- Jede größere Funktion hat ein eigenes Skript
-- Spieler, UI und Map sind getrennt
-- Szenen sind klar benannt und strukturiert
-
-Diese Struktur erleichtert:
-- Teamarbeit
-- Fehlerbehebung
-- Erweiterungen
-- Wartung des Codes
-
----
-
-## Zusammenarbeit im Team (technisch)
-
-- Die Projektstruktur und Szenenorganisation wurden zentral geplant
-- Die Spielerlogik wurde unabhängig vom UI entwickelt
-- Das Inventar wurde so umgesetzt, dass es mit dem Spieler zusammenarbeitet, aber eigenständig bleibt
-
----
-
-## Nicht umgesetzte Funktionen
-
-Folgende Funktionen wurden bewusst nicht umgesetzt:
-- Kisten- oder Container-System
-- Transfer von Items zwischen verschiedenen Inventaren
-
-Diese Funktionen könnten in zukünftigen Erweiterungen ergänzt werden.
-
----
-
-## Technische Zusammenfassung
-
-Das Projekt **Under Quiet Skies** zeigt:
-- Verständnis für das Szenen- und Node-System von Godot
-- Saubere Trennung von Logik und Darstellung
-- Strukturierte Programmierung in GDScript
-- Funktionierende Zusammenarbeit mehrerer Spielsysteme
-
-Das Programm ist übersichtlich, erweiterbar und erfüllt die Anforderungen eines vollständigen Schulprojekts im Bereich Game Development.
-
-
+</div>

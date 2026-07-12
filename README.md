@@ -7,7 +7,7 @@
 ![Engine](https://img.shields.io/badge/Godot-4.x-ff2ea6?style=for-the-badge&logo=godotengine&logoColor=white)
 ![Language](https://img.shields.io/badge/GDScript-💖-c9b6ff?style=for-the-badge)
 ![Style](https://img.shields.io/badge/Style-2D-ffe9a8?style=for-the-badge)
-![Team](https://img.shields.io/badge/Team-Ich%20%26%20Alex-ff8fd0?style=for-the-badge)
+
 
 ```
 · · · · · · · · · · · · · · · · · · · · · · · ·

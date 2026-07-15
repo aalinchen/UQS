@@ -62,36 +62,6 @@ Der Hauptordner heißt schlicht `Gdot_game` und enthält das komplette Godot-Pro
 
 ---
 
-## 🤝 Wer hat was gebaut?
-
-<table>
-<tr>
-<td valign="top" width="50%">
-
-### 🌸 Mein Revier
-
-- Projektplanung & -organisation
-- Gesamtes Spieldesign
-- Die komplette Spielwelt / Map, eigenhändig gepixelt
-- Grafik-Asset-Auswahl *(im Team)*
-- Szenenstruktur: MainScene, Loadingscreen, Levelwechsel
-- Projektstruktur in Godot aufgebaut
-
-</td>
-<td valign="top" width="50%">
-
-### ⚡ Alex' Revier
-
-- Hauptverantwortlich fürs Programmieren
-- Spielerbewegung implementiert
-- Spielerfunktionen umgesetzt
-- Spieler mit dem Inventar-UI verkabelt
-- Logik, damit Player und UI sich verstehen
-
-</td>
-</tr>
-</table>
-
 > 🙈 **Disclaimer:** Ein Kisten- oder Container-System gibt es nicht. Bewusst weggelassen, nicht vergessen — versprochen.
 
 ---

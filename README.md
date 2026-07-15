@@ -171,3 +171,8 @@ GDScript strukturiert geschrieben · mehrere Spielsysteme, die tatsächlich mite
 ```
 
 </div>
+
+
+---
+
+Gemacht gemeinsam mit [![Github](TwistedMoon](https://github.com/twistedMoon123)]

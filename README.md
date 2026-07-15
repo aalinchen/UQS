@@ -175,4 +175,4 @@ GDScript strukturiert geschrieben · mehrere Spielsysteme, die tatsächlich mite
 
 ---
 
-Gemacht gemeinsam mit [TwistedMoon](https://github.com/twistedMoon123)]
+Gemacht gemeinsam mit [TwistedMoon](https://github.com/twistedMoon123)
